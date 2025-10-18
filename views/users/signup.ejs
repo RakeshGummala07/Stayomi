@@ -1,0 +1,27 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row my-3">
+        <div class="col-8 offset-2">
+            <h3 class="text-center my-4">Signup </h3>
+            <form action="/signup" method="POST" novalidate class="needs-validation">
+        <!-- "listing[title]" it is another type to access the data from the from together -->
+                <div class="mb-2">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Enter Username" class="form-control" required>
+                    <div class="invalid-feedback">Please enter valid username</div>
+                </div>
+                <div class="mb-2">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter Email" class="form-control" required>
+                </div>
+                <div class="mb-2">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your Password" class="form-control" required>
+                    <div class="invalid-feedback">Please enter valid Password</div>
+                </div>
+                <button class="btn btn-dark my-2">Signup</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

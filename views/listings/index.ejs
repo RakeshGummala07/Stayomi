@@ -1,0 +1,49 @@
+<% layout("/layouts/boilerplate") %>
+    <div id="filters d-flex">
+        <div>
+            <form class="my-2 d-flex search-form" action="/listings" method="GET" role="search">
+                <input class="form-control me-2 search-input d-md-none" type="search" name="q" placeholder="Search destination" aria-label="Search"/>
+                <button class="btn btn-search d-md-none" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+    <% if (q) { %>
+        <h2>Search results for "<%= q %>"</h2>
+    <% } %>
+    <% if (count===0) { %>
+        <h2>No results found for "<%= q %>"</h2>
+    <% } %>
+    <div class="my-3 row row-cols-lg-3 row-cols-md-3 row-cols-sm-2">
+    <% for (let listing of allListing ) {%>
+    <a href="/listings/<%= listing._id %>">
+    <div class="card col">
+        <img src="<%= listing.image.url %>" class="card-img-top" alt="listing">
+        <div class="card-img-overlay"></div>
+        <div class="card-body">
+            <p class="card-text">
+                <b><%= listing.title %></b>
+            </p>
+            <p class="card-text">
+               &#8377; <%= listing.price.toLocaleString("en-IN") %>/night
+            </p>
+        </div>
+    </div>
+    </a>
+    <%}%>
+    </div>     
+
+
+<script>
+    let taxToggle = document.querySelector(".tax-switch");
+    taxToggle.addEventListener("click", ()=>{
+        let taxInfo = document.getElementsByClassName("tax-info");
+        for(info of taxInfo){
+            if(info.style.display != "inline"){
+                info.style.display = "inline"
+            }
+            else{
+                info.style.display = "none"
+            }
+        }
+    })
+</script>

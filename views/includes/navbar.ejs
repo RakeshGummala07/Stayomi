@@ -1,0 +1,33 @@
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"><img src="/assets/Stayomi-logoi.png" style="height: 65px; width: 65px;"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="link nav-link" href="/listings">Explore</a>
+        
+      </div>
+      <div class="search-bar ms-auto">
+        <form class="d-flex search-form" action="/listings" method="GET" role="search">
+        <input class="form-control me-2 search-input d-none d-md-block" type="search" name="q" placeholder="Search destination" aria-label="Search"/>
+        <button class="btn btn-search d-none d-md-block" type="submit">Search</button>
+    </form>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <a class="link nav-link" href="/listings/new">Add new Listing</a>
+        <% if(!currUser){%>
+        <a class="link nav-link auth" href="/signup">Signup </a>
+        <a class="link nav-link auth" href="/login">Login </a>
+        <%}%>
+        <% if(currUser){%>
+        <a class="link nav-link" href="/logout"> Logout </a>
+        <%}%>
+      </div>
+    </div>
+  </div>
+</nav>
+
+

@@ -1,0 +1,172 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+
+/* Nav-Bar */
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+.navbar-nav .link{
+    /* display: inline-block; */
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+.link:hover{
+    transform: scale(1.03);
+    color: #000;
+}
+
+/* Footer  */
+.footer{
+    padding-top: 0.6rem;
+    height: 5rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/* Social media icons */
+.f-info-social{
+    width: 100%;
+}
+.f-info-social a{
+    color: #000;
+    padding: 4px;
+    margin: 4px;
+}
+.f-info-social a:hover{
+    background-color: rgb(204, 204, 204);
+    border-radius: 50%;
+}
+/* Links */
+.f-info-links{
+    width: 100%;
+}
+.f-info-links a{
+    text-decoration: none;
+    color: #2b2929;
+    padding: 4px;
+    margin: 4px;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+    color: #222222;
+}
+.navbar-nav .auth{
+    font-weight: 600;
+    color: #000;
+}
+.navbar-nav .auth:hover{
+    opacity: 0.8;
+}
+
+/* Search Box  */
+.search-bar .search-input{
+    border-radius: 2rem;
+}
+.search-bar .btn-search{
+    border: 1px solid #000;
+    border-radius: 2rem;
+}
+.search-bar .btn-search:hover{
+    border: 1px solid #000;
+    background-color: #fe424d;
+    color: #fff;
+}
+
+/* Cards */
+.row a{
+    text-decoration: none !important;
+}
+
+.card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100%;
+    object-fit: cover;
+    height: 15rem;
+}
+.card-body{
+    padding: 0 !important;
+}
+
+.card-text p{
+    padding-top: 0 !important;
+}
+
+/* Card Effect */
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+
+/* Show Card */
+.show-card-text{
+    margin: 0 !important;
+    font-weight: 500 !important;
+}
+
+.btns{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.btns .btn{
+    margin-right: 1rem !important;
+}
+
+.show-img{
+    object-fit: cover;
+}
+
+
+/* Map  */
+#map{
+    height: 250px;
+    width: 100%;
+}
+
+/* Filters */
+#filters{
+    display: flex;
+    padding-top: 1rem;  
+    justify-content: space-between;
+    align-items: center;
+}
+#filters .filter-menu{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.filter-menu .filter{
+    text-align: center;
+    margin-right: 2rem;
+    opacity: 0.8;
+    border-bottom: 2px solid transparent;
+    transition:border-color 0.3s ease;
+    transition:transform 0.2s ease;
+}
+#filters .filter:hover{
+    border-bottom-color: gray;
+    transform: scale(1.03);
+    color: #000;
+}
+
+.tax-info{
+    display: none;
+}

@@ -102,7 +102,8 @@ app.use((req,res,next)=>{
     next();
 })
 
-app.use("/", listingRouter);
+//Root route
+app.get("/", wrapAsync(listingController.index));
 
 //Listings Route
 app.use("/listings", listingRouter);

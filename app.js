@@ -103,7 +103,7 @@ app.use((req,res,next)=>{
 })
 
 //Root route
-app.get("/", wrapAsync(listingController.index));
+app.get("/", (req, res) => res.redirect("/listings"));
 
 //Listings Route
 app.use("/listings", listingRouter);

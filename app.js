@@ -102,6 +102,7 @@ app.use((req,res,next)=>{
     next();
 })
 
+app.use("/", listingRouter);
 
 //Listings Route
 app.use("/listings", listingRouter);

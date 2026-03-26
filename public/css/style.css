@@ -69,7 +69,7 @@ body{
 }
 
 /* Search Box  */
-.search-bar .search-input{
+/* .search-bar .search-input{
     border-radius: 2rem;
 }
 .search-bar .btn-search{
@@ -80,7 +80,7 @@ body{
     border: 1px solid #000;
     background-color: #fe424d;
     color: #fff;
-}
+} */
 
 /* Cards */
 .row a{
